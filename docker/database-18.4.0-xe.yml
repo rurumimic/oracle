@@ -1,0 +1,32 @@
+# ============================================
+# Docker Create/Desctroy
+# --------------------------------------------
+# docker compose -f docker/database-18.4.0-xe.yml up -d
+# docker compose -f docker/database-18.4.0-xe.yml down [-v]
+# ============================================
+# Usage
+# --------------------------------------------
+# docker exec -it oracle bash
+# ============================================
+version: "3.9"
+services:
+  oracle:
+    image: container-registry.oracle.com/database/express:18.4.0-xe
+    container_name: oracle
+    hostname: oracle
+    tty: true
+    ports:
+      - 1521:1521 # Oracle Listener
+      - 5500:5500 # EM Express
+    environment:
+      ORACLE_PWD: oracle # SYS, SYSTEM, PDB_ADMIN: auto generated
+      # ORACLE_CHARACTERSET: AL32UTF8 # default: AL32UTF8
+      # ORACLE_SID: ORCLSTARTER # default: XE
+      # ORACLE_PDB: STARTERSET # default: XEPDB1
+      TZ: Asia/Seoul
+    volumes:
+      - oradata:/opt/oracle/oradata
+      - ./share:/share
+      # - ./share/setup:/opt/oracle/scripts/setup
+volumes:
+  oradata:

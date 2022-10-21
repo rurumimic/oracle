@@ -1,0 +1,51 @@
+docker compose -f docker/database-18.4.0-xe.yml exec -it oracle bash
+
+bash-4.2# ls -al
+total 76
+drwxr-xr-x   1 root root 4096 Oct 21 09:22 .
+drwxr-xr-x   1 root root 4096 Oct 21 09:22 ..
+-rwxr-xr-x   1 root root    0 Oct 21 09:22 .dockerenv
+lrwxrwxrwx   1 root root    7 Apr 10  2019 bin -> usr/bin
+dr-xr-xr-x   2 root root 4096 Apr 11  2018 boot
+drwxr-xr-x   5 root root  360 Oct 21 09:22 dev
+lrwxrwxrwx   1 root root   19 Apr 29  2020 docker-entrypoint-initdb.d -> /opt/oracle/scripts
+drwxr-xr-x   1 root root 4096 Oct 21 09:22 etc
+drwxr-xr-x   1 root root 4096 Apr 29  2020 home
+lrwxrwxrwx   1 root root    7 Apr 10  2019 lib -> usr/lib
+lrwxrwxrwx   1 root root    9 Apr 10  2019 lib64 -> usr/lib64
+drwxr-xr-x   2 root root 4096 Apr 11  2018 media
+drwxr-xr-x   2 root root 4096 Apr 11  2018 mnt
+drwxr-xr-x   1 root root 4096 Apr 29  2020 opt
+dr-xr-xr-x 290 root root    0 Oct 21 09:22 proc
+dr-xr-x---   1 root root 4096 Apr 29  2020 root
+drwxr-xr-x   1 root root 4096 Apr 29  2020 run
+lrwxrwxrwx   1 root root    8 Apr 10  2019 sbin -> usr/sbin
+lrwxrwxrwx   1 root root   26 Apr 29  2020 setPassword.sh -> /opt/oracle/setPassword.sh
+drwxr-xr-x   3 root root   96 Oct 21 09:20 share
+drwxr-xr-x   2 root root 4096 Apr 11  2018 srv
+dr-xr-xr-x  13 root root    0 Oct 21 09:22 sys
+drwxrwxrwt   1 root root 4096 Oct 21 09:31 tmp
+drwxr-xr-x   1 root root 4096 Apr 10  2019 usr
+drwxr-xr-x   1 root root 4096 Apr 10  2019 var
+
+bash-4.2# env
+HOSTNAME=oracle
+TERM=xterm
+ORACLE_DOCKER_INSTALL=true
+INSTALL_DIR=/install
+ORACLE_SID=XE
+CHECK_DB_FILE=checkDBStatus.sh
+INSTALL_FILE_1=https://download.oracle.com/otn-pub/otn_software/db-express/oracle-database-xe-18c-1.0-1.x86_64.rpm
+ORACLE_BASE=/opt/oracle
+CONF_FILE=oracle-xe-18c.conf
+CHECK_SPACE_FILE=checkSpace.sh
+PATH=/opt/oracle/product/18c/dbhomeXE/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PWD=/
+PWD_FILE=setPassword.sh
+TZ=Asia/Seoul
+RUN_FILE=runOracle.sh
+SHLVL=1
+HOME=/root
+ORACLE_PWD=oracle
+ORACLE_HOME=/opt/oracle/product/18c/dbhomeXE
+_=/usr/bin/env

@@ -1,0 +1,4970 @@
+docker compose -f docker/database-18.4.0-xe.yml exec -it oracle bash
+
+bash-4.2# cd /share/schemas
+bash-4.2# sqlplus system/oracle@//localhost:1521/XE
+
+SQL*Plus: Release 18.0.0.0.0 - Production on Fri Oct 21 10:31:32 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production
+Version 18.4.0.0.0
+
+SQL> @mksample oracle oracle hrpw oepw pmpw ixpw shpw bipw users temp /var/log/my-log/ XEPDB1
+
+specify password for SYSTEM as parameter 1:
+
+specify password for SYS as parameter 2:
+
+specify password for HR as parameter 3:
+
+specify password for OE as parameter 4:
+
+specify password for PM as parameter 5:
+
+specify password for IX as parameter 6:
+
+specify password for  SH as parameter 7:
+
+specify password for  BI as parameter 8:
+
+specify default tablespace as parameter 9:
+
+specify temporary tablespace as parameter 10:
+
+specify log file directory (including trailing delimiter) as parameter 11:
+
+specify connect string as parameter 12:
+
+Sample Schemas are being created ...
+
+
+Connected.
+
+User dropped.
+
+DROP USER oe CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'OE' does not exist
+
+
+DROP USER pm CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'PM' does not exist
+
+
+DROP USER ix CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'IX' does not exist
+
+
+DROP USER sh CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'SH' does not exist
+
+
+DROP USER bi CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'BI' does not exist
+
+
+Connected.
+
+specify password for HR as parameter 1:
+
+specify default tablespeace for HR as parameter 2:
+
+specify temporary tablespace for HR as parameter 3:
+
+specify password for SYS as parameter 4:
+
+specify log path as parameter 5:
+
+specify connect string as parameter 6:
+
+DROP USER hr CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'HR' does not exist
+
+
+
+User created.
+
+
+User altered.
+
+
+User altered.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Grant succeeded.
+
+Connected.
+
+Session altered.
+
+
+Session altered.
+
+******  Creating REGIONS table ....
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+******  Creating COUNTRIES table ....
+
+Table created.
+
+
+Table altered.
+
+******  Creating LOCATIONS table ....
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Sequence created.
+
+******  Creating DEPARTMENTS table ....
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Sequence created.
+
+******  Creating JOBS table ....
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+******  Creating EMPLOYEES table ....
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Sequence created.
+
+******  Creating JOB_HISTORY table ....
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+******  Creating EMP_DETAILS_VIEW view ...
+
+View created.
+
+
+Commit complete.
+
+
+Session altered.
+
+******  Populating REGIONS table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating COUNTIRES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating LOCATIONS table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating DEPARTMENTS table ....
+
+Table altered.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating JOBS table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating EMPLOYEES table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+******  Populating JOB_HISTORY table ....
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Table altered.
+
+
+Commit complete.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Commit complete.
+
+
+Procedure created.
+
+
+Trigger created.
+
+
+Trigger altered.
+
+
+Procedure created.
+
+
+Trigger created.
+
+
+Commit complete.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Commit complete.
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+specify password for OE as parameter 1:
+
+specify default tablespeace for OE as parameter 2:
+
+specify temporary tablespace for OE as parameter 3:
+
+specify password for HR as parameter 4:
+
+specify password for SYS as parameter 5:
+
+specify directory path for the data files as parameter 6:
+
+writeable directory path for the log files as parameter 7:
+
+specify version as parameter 8:
+
+specify connect string as parameter 9:
+
+DROP USER oe CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'OE' does not exist
+
+
+
+User created.
+
+
+User altered.
+
+
+User altered.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Grant succeeded.
+
+Connected.
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Session altered.
+
+
+Session altered.
+
+
+specify Sample Schema version as parameter 1:
+
+specify password for OE as parameter 2:
+
+PROMPT password for SYS as parameter 3:
+
+specify connect string as parameter 4:
+
+
+Type created.
+
+
+Type created.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Index created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Trigger created.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Sequence created.
+
+
+specify password for OE as parameter 1:
+
+PROMPT password for SYS as parameter 2:
+
+specify connect string as parameter 3:
+
+Connected.
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+View created.
+
+
+View created.
+
+
+Grant succeeded.
+
+
+Session altered.
+
+
+Package created.
+
+
+Warning: Package Body created with compilation errors.
+
+
+View created.
+
+
+Package altered.
+
+
+View altered.
+
+
+Grant succeeded.
+
+
+Trigger created.
+
+
+Synonym created.
+
+
+Grant succeeded.
+
+
+Call completed.
+
+
+Session altered.
+
+
+Session altered.
+
+
+Package created.
+
+
+no rows selected
+
+
+Synonym created.
+
+
+Grant succeeded.
+
+
+Package created.
+
+
+no rows selected
+
+
+Package body created.
+
+
+no rows selected
+
+
+Synonym created.
+
+
+Grant succeeded.
+
+
+Package created.
+
+
+no rows selected
+
+
+Package body created.
+
+
+no rows selected
+
+
+Grant succeeded.
+
+
+Synonym created.
+
+
+Package created.
+
+
+no rows selected
+
+
+Package body created.
+
+
+no rows selected
+
+
+Synonym created.
+
+
+Grant succeeded.
+
+
+specify password for OE as parameter 1:
+
+PROMPT password for SYS as parameter 2:
+
+specify connect string as parameter 3:
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+DROP DIRECTORY SS_OE_XMLDIR
+*
+ERROR at line 1:
+ORA-04043: object SS_OE_XMLDIR does not exist
+
+
+
+Directory created.
+
+
+Commit complete.
+
+Connected.
+
+Revoke succeeded.
+
+Connected.
+Connected.
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+Call completed.
+
+
+Call completed.
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+Revoke succeeded.
+
+Connected.
+Connected.
+
+Revoke succeeded.
+
+
+Revoke succeeded.
+
+
+Revoke succeeded.
+
+
+Package dropped.
+
+
+Package dropped.
+
+
+Package dropped.
+
+
+Package dropped.
+
+
+Package dropped.
+
+
+Trigger dropped.
+
+
+View dropped.
+
+Connected.
+
+Commit complete.
+
+
+specify Sample Schema version as parameter 1:
+
+specify location for data and control files as parameter 2:
+
+specify location for log files as parameter 3:
+
+specify password for oe as parameter 4:
+
+Setting FEEDBACK OFF for inserts
+
+Setting FEEDBACK ON
+
+
+1 row created.
+
+
+1 row created.
+
+
+Commit complete.
+
+
+Table altered.
+
+
+Session altered.
+
+
+Session altered.
+
+
+Commit complete.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+Function created.
+
+
+View created.
+
+
+View created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Session altered.
+
+...creating subschema OC in OE
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Type body created.
+
+
+Type created.
+
+
+Type body created.
+
+
+Type created.
+
+
+Type body created.
+
+
+Table created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+View created.
+
+
+Trigger created.
+
+
+Trigger created.
+
+
+Commit complete.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+1 row created.
+
+
+Type altered.
+
+
+3 rows updated.
+
+
+8 rows updated.
+
+
+6 rows updated.
+
+
+4 rows updated.
+
+
+Commit complete.
+
+
+Type body altered.
+
+
+Type body altered.
+
+
+Type body altered.
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+Connected.
+
+specify password for PM as parameter 1:
+
+specify default tablespeace for PM as parameter 2:
+
+specify temporary tablespace for PM as parameter 3:
+
+specify password for OE as parameter 4:
+
+specify password for SYS as parameter 5:
+
+specify directory path for the PM data files as parameter 6:
+
+specify directory path for the PM load log files as parameter 7:
+
+specify work directory path as parameter 8:
+
+specify connect string as parameter 9:
+
+DROP USER pm CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'PM' does not exist
+
+
+
+User created.
+
+
+User altered.
+
+
+User altered.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Grant succeeded.
+
+
+Directory created.
+
+
+Grant succeeded.
+
+Connected.
+
+Session altered.
+
+
+Session altered.
+
+
+Type created.
+
+
+Type created.
+
+
+Type created.
+
+
+Table created.
+
+
+Index created.
+
+
+Table altered.
+
+
+Commit complete.
+
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:04 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Conventional
+Commit point reached - logical record count 15
+Commit point reached - logical record count 16
+
+Table PRINT_MEDIA:
+  4 Rows successfully loaded.
+
+Table TEXTDOCS_NESTEDTAB:
+  12 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/pm_p_lob.log
+for more information about the load.
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+specify password for IX as parameter 1:
+
+specify default tablespeace for IX as parameter 2:
+
+specify temporary tablespace for IX as parameter 3:
+
+specify password for SYS as parameter 4:
+
+specify path for log files as parameter 5:
+
+specify version as parameter 6:
+
+specify connect string as parameter 7:
+
+dropping user ...
+DROP USER ix CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'IX' does not exist
+
+
+creating user ...
+
+
+User created.
+
+
+User altered.
+
+
+User altered.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+Granting Streams privileges, vrs=v3 ...
+
+PL/SQL procedure successfully completed.
+
+setting job_queue_processes and aq_tm_processes ...
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+Type created.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+Session altered.
+
+
+Session altered.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+PL/SQL procedure successfully completed.
+
+
+QUEUE           MSG_STATE       CONSUMER_NAME   USER_DATA(ORDER_ID, PRODUCT_ID, CUSTOMER_ID, CUST_FIRST_NAME
+--------------- --------------- --------------- ------------------------------------------------------------
+ORDERS_QUEUE    READY           BILLING         ORDER_EVENT_TYP(2458, 3117, 101, 'Constantin', 'Welles', 0,
+                                                '12-DEC-02')
+
+ORDERS_QUEUE    READY           SHIPPING        ORDER_EVENT_TYP(2458, 3117, 101, 'Constantin', 'Welles', 0,
+                                                '12-DEC-02')
+
+
+2 rows selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+QUEUE           MSG_STATE       CONSUMER_NAME   USER_DATA(ORDER_ID, PRODUCT_ID, CUSTOMER_ID, CUST_FIRST_NAME
+--------------- --------------- --------------- ------------------------------------------------------------
+ORDERS_QUEUE    READY           BILLING         ORDER_EVENT_TYP(2458, 3117, 101, 'Constantin', 'Welles', 0,
+                                                '12-DEC-02')
+
+ORDERS_QUEUE    PROCESSED       SHIPPING        ORDER_EVENT_TYP(2458, 3117, 101, 'Constantin', 'Welles', 0,
+                                                '12-DEC-02')
+
+
+2 rows selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+QUEUE           MSG_STATE       CONSUMER_NAME   USER_DATA(ORDER_ID, PRODUCT_ID, CUSTOMER_ID, CUST_FIRST_NAME
+--------------- --------------- --------------- ------------------------------------------------------------
+ORDERS_QUEUE    PROCESSED       BILLING         ORDER_EVENT_TYP(2458, 3117, 101, 'Constantin', 'Welles', 0,
+                                                '12-DEC-02')
+
+ORDERS_QUEUE    PROCESSED       SHIPPING        ORDER_EVENT_TYP(2458, 3117, 101, 'Constantin', 'Welles', 0,
+                                                '12-DEC-02')
+
+
+2 rows selected.
+
+
+PL/SQL procedure successfully completed.
+
+
+OBJECT_TYPE          OBJECT_NAME                    STATUS
+-------------------- ------------------------------ -------
+EVALUATION CONTEXT   AQ$_ORDERS_QUEUETABLE_V        VALID
+EVALUATION CONTEXT   AQ$_STREAMS_QUEUE_TABLE_V      VALID
+INDEX                AQ$_STREAMS_QUEUE_TABLE_Y      VALID
+INDEX                SYS_C007420                    VALID
+INDEX                SYS_C007423                    VALID
+INDEX                SYS_C007432                    VALID
+INDEX                SYS_C007435                    VALID
+INDEX                SYS_IL0000073636C00036$$       VALID
+INDEX                SYS_IL0000073663C00028$$       VALID
+INDEX                SYS_IL0000073663C00029$$       VALID
+INDEX                SYS_IOT_TOP_73645              VALID
+INDEX                SYS_IOT_TOP_73647              VALID
+INDEX                SYS_IOT_TOP_73650              VALID
+INDEX                SYS_IOT_TOP_73653              VALID
+INDEX                SYS_IOT_TOP_73674              VALID
+INDEX                SYS_IOT_TOP_73676              VALID
+INDEX                SYS_IOT_TOP_73679              VALID
+INDEX                SYS_IOT_TOP_73682              VALID
+INDEX                SYS_IOT_TOP_73684              VALID
+LOB                  SYS_LOB0000073636C00036$$      VALID
+LOB                  SYS_LOB0000073663C00028$$      VALID
+LOB                  SYS_LOB0000073663C00029$$      VALID
+QUEUE                AQ$_ORDERS_QUEUETABLE_E        VALID
+QUEUE                AQ$_STREAMS_QUEUE_TABLE_E      VALID
+QUEUE                ORDERS_QUEUE                   VALID
+QUEUE                STREAMS_QUEUE                  VALID
+RULE SET             ORDERS_QUEUE_N                 VALID
+RULE SET             ORDERS_QUEUE_R                 VALID
+RULE SET             STREAMS_QUEUE_N                VALID
+RULE SET             STREAMS_QUEUE_R                VALID
+SEQUENCE             AQ$_ORDERS_QUEUETABLE_N        VALID
+SEQUENCE             AQ$_STREAMS_QUEUE_TABLE_N      VALID
+TABLE                AQ$_ORDERS_QUEUETABLE_G        VALID
+TABLE                AQ$_ORDERS_QUEUETABLE_H        VALID
+TABLE                AQ$_ORDERS_QUEUETABLE_I        VALID
+TABLE                AQ$_ORDERS_QUEUETABLE_L        VALID
+TABLE                AQ$_ORDERS_QUEUETABLE_S        VALID
+TABLE                AQ$_ORDERS_QUEUETABLE_T        VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_C      VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_G      VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_H      VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_I      VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_L      VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_S      VALID
+TABLE                AQ$_STREAMS_QUEUE_TABLE_T      VALID
+TABLE                ORDERS_QUEUETABLE              VALID
+TABLE                STREAMS_QUEUE_TABLE            VALID
+TABLE                SYS_IOT_OVER_73650             VALID
+TABLE                SYS_IOT_OVER_73679             VALID
+TYPE                 ORDER_EVENT_TYP                VALID
+VIEW                 AQ$ORDERS_QUEUETABLE           VALID
+VIEW                 AQ$ORDERS_QUEUETABLE_R         VALID
+VIEW                 AQ$ORDERS_QUEUETABLE_S         VALID
+VIEW                 AQ$STREAMS_QUEUE_TABLE         VALID
+VIEW                 AQ$STREAMS_QUEUE_TABLE_R       VALID
+VIEW                 AQ$STREAMS_QUEUE_TABLE_S       VALID
+VIEW                 AQ$_ORDERS_QUEUETABLE_F        VALID
+VIEW                 AQ$_STREAMS_QUEUE_TABLE_F      VALID
+
+58 rows selected.
+
+
+OBJECT_TYPE          STATUS    COUNT(*)
+-------------------- ------- ----------
+EVALUATION CONTEXT   VALID            2
+INDEX                VALID           17
+LOB                  VALID            3
+QUEUE                VALID            4
+RULE SET             VALID            4
+SEQUENCE             VALID            2
+TABLE                VALID           17
+TYPE                 VALID            1
+VIEW                 VALID            8
+
+9 rows selected.
+
+Connected.
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+specify password for SH as parameter 1:
+
+specify default tablespace for SH as parameter 2:
+
+specify temporary tablespace for SH as parameter 3:
+
+specify password for SYS as parameter 4:
+
+specify directory path for the data files as parameter 5:
+
+writeable directory path for the log files as parameter 6:
+
+specify version as parameter 7:
+
+specify connect string as parameter 8:
+
+
+Session altered.
+
+DROP USER sh CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'SH' does not exist
+
+
+
+User created.
+
+
+User altered.
+
+
+User altered.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Grant succeeded.
+
+
+Directory created.
+
+
+Directory created.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+Connected.
+
+Session altered.
+
+
+Session altered.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Table created.
+
+
+Creating constraints ...
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+specify password for SH as parameter 1:
+
+specify path for data files as parameter 2:
+
+specify path for log files as parameter 3:
+
+specify version as parameter 4:
+
+specify connect string as parameter 5:
+
+Looking for indexes that could slow down load ...
+
+no rows selected
+
+
+loading TIMES using:
+/share/schemas/sales_history/time_v3.ctl
+/share/schemas/sales_history/time_v3.dat
+/var/log/my-log/time_v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:11 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+Save data point reached - logical record count 1000.
+
+Load completed - logical record count 1826.
+
+Table TIMES:
+  1826 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/time_v3.log
+for more information about the load.
+
+
+loading COUNTRIES using:
+/share/schemas/sales_history/coun_v3.ctl
+/share/schemas/sales_history/coun_v3.dat
+/var/log/my-log/coun_v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:12 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+
+Load completed - logical record count 23.
+
+Table COUNTRIES:
+  23 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/coun_v3.log
+for more information about the load.
+
+
+loading CUSTOMERS using:
+/share/schemas/sales_history/cust_v3.ctl
+/share/schemas/sales_history/cust1v3.dat
+/var/log/my-log/cust1v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:12 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+Save data point reached - logical record count 10000.
+Save data point reached - logical record count 20000.
+Save data point reached - logical record count 30000.
+Save data point reached - logical record count 40000.
+Save data point reached - logical record count 50000.
+
+Load completed - logical record count 55500.
+
+Table CUSTOMERS:
+  55500 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/cust1v3.log
+for more information about the load.
+
+
+loading PRODUCTS  using:
+/share/schemas/sales_history/prod_v3.ctl
+/share/schemas/sales_history/prod1v3.dat
+/var/log/my-log/prod1v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:12 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+
+Load completed - logical record count 72.
+
+Table PRODUCTS:
+  72 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/prod1v3.log
+for more information about the load.
+
+
+loading PROMOTIONS  using:
+/share/schemas/sales_history/prom_v3.ctl
+/share/schemas/sales_history/prom1v3.dat
+/var/log/my-log/prom1v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:12 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+Save data point reached - logical record count 10.
+Save data point reached - logical record count 20.
+Save data point reached - logical record count 30.
+Save data point reached - logical record count 40.
+Save data point reached - logical record count 50.
+Save data point reached - logical record count 60.
+Save data point reached - logical record count 70.
+Save data point reached - logical record count 80.
+Save data point reached - logical record count 90.
+Save data point reached - logical record count 100.
+Save data point reached - logical record count 110.
+Save data point reached - logical record count 120.
+Save data point reached - logical record count 130.
+Save data point reached - logical record count 140.
+Save data point reached - logical record count 150.
+Save data point reached - logical record count 160.
+Save data point reached - logical record count 170.
+Save data point reached - logical record count 180.
+Save data point reached - logical record count 190.
+Save data point reached - logical record count 200.
+Save data point reached - logical record count 210.
+Save data point reached - logical record count 220.
+Save data point reached - logical record count 230.
+Save data point reached - logical record count 240.
+Save data point reached - logical record count 250.
+Save data point reached - logical record count 260.
+Save data point reached - logical record count 270.
+Save data point reached - logical record count 280.
+Save data point reached - logical record count 290.
+Save data point reached - logical record count 300.
+Save data point reached - logical record count 310.
+Save data point reached - logical record count 320.
+Save data point reached - logical record count 330.
+Save data point reached - logical record count 340.
+Save data point reached - logical record count 350.
+Save data point reached - logical record count 360.
+Save data point reached - logical record count 370.
+Save data point reached - logical record count 380.
+Save data point reached - logical record count 390.
+Save data point reached - logical record count 400.
+Save data point reached - logical record count 410.
+Save data point reached - logical record count 420.
+Save data point reached - logical record count 430.
+Save data point reached - logical record count 440.
+Save data point reached - logical record count 450.
+Save data point reached - logical record count 460.
+Save data point reached - logical record count 470.
+Save data point reached - logical record count 480.
+Save data point reached - logical record count 490.
+Save data point reached - logical record count 500.
+
+Load completed - logical record count 503.
+
+Table PROMOTIONS:
+  503 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/prom1v3.log
+for more information about the load.
+
+
+loading CHANNELS using:
+/share/schemas/sales_history/chan_v3.ctl
+/share/schemas/sales_history/chan_v3.dat
+/var/log/my-log/chan_v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:13 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+
+Load completed - logical record count 5.
+
+Table CHANNELS:
+  5 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/chan_v3.log
+for more information about the load.
+
+
+loading SALES  using:
+/share/schemas/sales_history/sale_v3.ctl
+/share/schemas/sales_history/sale1v3.dat
+/var/log/my-log/sale1v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:13 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+Save data point reached - logical record count 100000.
+Save data point reached - logical record count 200000.
+Save data point reached - logical record count 300000.
+Save data point reached - logical record count 400000.
+Save data point reached - logical record count 500000.
+Save data point reached - logical record count 600000.
+Save data point reached - logical record count 700000.
+Save data point reached - logical record count 800000.
+Save data point reached - logical record count 900000.
+
+Load completed - logical record count 916039.
+
+Table SALES:
+  916039 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/sale1v3.log
+for more information about the load.
+
+
+loading COSTS using external table
+
+
+Table created.
+
+INSERT /*+ append */ INTO costs
+*
+ERROR at line 1:
+ORA-29913: error in executing ODCIEXTTABLEOPEN callout
+ORA-29400: data cartridge error
+KUP-04005: error while accessing file /var/log/my-log/ext_1v3.log
+
+
+
+loading additonal SALES using:
+/share/schemas/sales_history/dmsal_v3.ctl
+/share/schemas/sales_history/dmsal_v3.dat
+/var/log/my-log/dmsal_v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:20 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+Save data point reached - logical record count 100.
+Save data point reached - logical record count 200.
+Save data point reached - logical record count 300.
+Save data point reached - logical record count 400.
+Save data point reached - logical record count 500.
+Save data point reached - logical record count 600.
+Save data point reached - logical record count 700.
+Save data point reached - logical record count 800.
+Save data point reached - logical record count 900.
+Save data point reached - logical record count 1000.
+Save data point reached - logical record count 1100.
+Save data point reached - logical record count 1200.
+Save data point reached - logical record count 1300.
+Save data point reached - logical record count 1400.
+Save data point reached - logical record count 1500.
+Save data point reached - logical record count 1600.
+Save data point reached - logical record count 1700.
+Save data point reached - logical record count 1800.
+Save data point reached - logical record count 1900.
+Save data point reached - logical record count 2000.
+Save data point reached - logical record count 2100.
+Save data point reached - logical record count 2200.
+Save data point reached - logical record count 2300.
+Save data point reached - logical record count 2400.
+Save data point reached - logical record count 2500.
+Save data point reached - logical record count 2600.
+Save data point reached - logical record count 2700.
+Save data point reached - logical record count 2800.
+
+Load completed - logical record count 2804.
+
+Table SALES:
+  2804 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/dmsal_v3.log
+for more information about the load.
+
+
+loading SUPPLEMENTARY DEMOGRAPHICS using:
+/share/schemas/sales_history/dem_v3.ctl
+/share/schemas/sales_history/dem1v3.dat
+/var/log/my-log/dem1v3.log
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Fri Oct 21 10:32:20 2022
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2018, Oracle and/or its affiliates.  All rights reserved.
+
+Path used:      Direct
+Save data point reached - logical record count 10.
+Save data point reached - logical record count 20.
+Save data point reached - logical record count 30.
+Save data point reached - logical record count 40.
+Save data point reached - logical record count 50.
+Save data point reached - logical record count 60.
+Save data point reached - logical record count 70.
+Save data point reached - logical record count 80.
+Save data point reached - logical record count 90.
+Save data point reached - logical record count 100.
+Save data point reached - logical record count 110.
+Save data point reached - logical record count 120.
+Save data point reached - logical record count 130.
+Save data point reached - logical record count 140.
+Save data point reached - logical record count 150.
+Save data point reached - logical record count 160.
+Save data point reached - logical record count 170.
+Save data point reached - logical record count 180.
+Save data point reached - logical record count 190.
+Save data point reached - logical record count 200.
+Save data point reached - logical record count 210.
+Save data point reached - logical record count 220.
+Save data point reached - logical record count 230.
+Save data point reached - logical record count 240.
+Save data point reached - logical record count 250.
+Save data point reached - logical record count 260.
+Save data point reached - logical record count 270.
+Save data point reached - logical record count 280.
+Save data point reached - logical record count 290.
+Save data point reached - logical record count 300.
+Save data point reached - logical record count 310.
+Save data point reached - logical record count 320.
+Save data point reached - logical record count 330.
+Save data point reached - logical record count 340.
+Save data point reached - logical record count 350.
+Save data point reached - logical record count 360.
+Save data point reached - logical record count 370.
+Save data point reached - logical record count 380.
+Save data point reached - logical record count 390.
+Save data point reached - logical record count 400.
+Save data point reached - logical record count 410.
+Save data point reached - logical record count 420.
+Save data point reached - logical record count 430.
+Save data point reached - logical record count 440.
+Save data point reached - logical record count 450.
+Save data point reached - logical record count 460.
+Save data point reached - logical record count 470.
+Save data point reached - logical record count 480.
+Save data point reached - logical record count 490.
+Save data point reached - logical record count 500.
+Save data point reached - logical record count 510.
+Save data point reached - logical record count 520.
+Save data point reached - logical record count 530.
+Save data point reached - logical record count 540.
+Save data point reached - logical record count 550.
+Save data point reached - logical record count 560.
+Save data point reached - logical record count 570.
+Save data point reached - logical record count 580.
+Save data point reached - logical record count 590.
+Save data point reached - logical record count 600.
+Save data point reached - logical record count 610.
+Save data point reached - logical record count 620.
+Save data point reached - logical record count 630.
+Save data point reached - logical record count 640.
+Save data point reached - logical record count 650.
+Save data point reached - logical record count 660.
+Save data point reached - logical record count 670.
+Save data point reached - logical record count 680.
+Save data point reached - logical record count 690.
+Save data point reached - logical record count 700.
+Save data point reached - logical record count 710.
+Save data point reached - logical record count 720.
+Save data point reached - logical record count 730.
+Save data point reached - logical record count 740.
+Save data point reached - logical record count 750.
+Save data point reached - logical record count 760.
+Save data point reached - logical record count 770.
+Save data point reached - logical record count 780.
+Save data point reached - logical record count 790.
+Save data point reached - logical record count 800.
+Save data point reached - logical record count 810.
+Save data point reached - logical record count 820.
+Save data point reached - logical record count 830.
+Save data point reached - logical record count 840.
+Save data point reached - logical record count 850.
+Save data point reached - logical record count 860.
+Save data point reached - logical record count 870.
+Save data point reached - logical record count 880.
+Save data point reached - logical record count 890.
+Save data point reached - logical record count 900.
+Save data point reached - logical record count 910.
+Save data point reached - logical record count 920.
+Save data point reached - logical record count 930.
+Save data point reached - logical record count 940.
+Save data point reached - logical record count 950.
+Save data point reached - logical record count 960.
+Save data point reached - logical record count 970.
+Save data point reached - logical record count 980.
+Save data point reached - logical record count 990.
+Save data point reached - logical record count 1000.
+Save data point reached - logical record count 1010.
+Save data point reached - logical record count 1020.
+Save data point reached - logical record count 1030.
+Save data point reached - logical record count 1040.
+Save data point reached - logical record count 1050.
+Save data point reached - logical record count 1060.
+Save data point reached - logical record count 1070.
+Save data point reached - logical record count 1080.
+Save data point reached - logical record count 1090.
+Save data point reached - logical record count 1100.
+Save data point reached - logical record count 1110.
+Save data point reached - logical record count 1120.
+Save data point reached - logical record count 1130.
+Save data point reached - logical record count 1140.
+Save data point reached - logical record count 1150.
+Save data point reached - logical record count 1160.
+Save data point reached - logical record count 1170.
+Save data point reached - logical record count 1180.
+Save data point reached - logical record count 1190.
+Save data point reached - logical record count 1200.
+Save data point reached - logical record count 1210.
+Save data point reached - logical record count 1220.
+Save data point reached - logical record count 1230.
+Save data point reached - logical record count 1240.
+Save data point reached - logical record count 1250.
+Save data point reached - logical record count 1260.
+Save data point reached - logical record count 1270.
+Save data point reached - logical record count 1280.
+Save data point reached - logical record count 1290.
+Save data point reached - logical record count 1300.
+Save data point reached - logical record count 1310.
+Save data point reached - logical record count 1320.
+Save data point reached - logical record count 1330.
+Save data point reached - logical record count 1340.
+Save data point reached - logical record count 1350.
+Save data point reached - logical record count 1360.
+Save data point reached - logical record count 1370.
+Save data point reached - logical record count 1380.
+Save data point reached - logical record count 1390.
+Save data point reached - logical record count 1400.
+Save data point reached - logical record count 1410.
+Save data point reached - logical record count 1420.
+Save data point reached - logical record count 1430.
+Save data point reached - logical record count 1440.
+Save data point reached - logical record count 1450.
+Save data point reached - logical record count 1460.
+Save data point reached - logical record count 1470.
+Save data point reached - logical record count 1480.
+Save data point reached - logical record count 1490.
+Save data point reached - logical record count 1500.
+Save data point reached - logical record count 1510.
+Save data point reached - logical record count 1520.
+Save data point reached - logical record count 1530.
+Save data point reached - logical record count 1540.
+Save data point reached - logical record count 1550.
+Save data point reached - logical record count 1560.
+Save data point reached - logical record count 1570.
+Save data point reached - logical record count 1580.
+Save data point reached - logical record count 1590.
+Save data point reached - logical record count 1600.
+Save data point reached - logical record count 1610.
+Save data point reached - logical record count 1620.
+Save data point reached - logical record count 1630.
+Save data point reached - logical record count 1640.
+Save data point reached - logical record count 1650.
+Save data point reached - logical record count 1660.
+Save data point reached - logical record count 1670.
+Save data point reached - logical record count 1680.
+Save data point reached - logical record count 1690.
+Save data point reached - logical record count 1700.
+Save data point reached - logical record count 1710.
+Save data point reached - logical record count 1720.
+Save data point reached - logical record count 1730.
+Save data point reached - logical record count 1740.
+Save data point reached - logical record count 1750.
+Save data point reached - logical record count 1760.
+Save data point reached - logical record count 1770.
+Save data point reached - logical record count 1780.
+Save data point reached - logical record count 1790.
+Save data point reached - logical record count 1800.
+Save data point reached - logical record count 1810.
+Save data point reached - logical record count 1820.
+Save data point reached - logical record count 1830.
+Save data point reached - logical record count 1840.
+Save data point reached - logical record count 1850.
+Save data point reached - logical record count 1860.
+Save data point reached - logical record count 1870.
+Save data point reached - logical record count 1880.
+Save data point reached - logical record count 1890.
+Save data point reached - logical record count 1900.
+Save data point reached - logical record count 1910.
+Save data point reached - logical record count 1920.
+Save data point reached - logical record count 1930.
+Save data point reached - logical record count 1940.
+Save data point reached - logical record count 1950.
+Save data point reached - logical record count 1960.
+Save data point reached - logical record count 1970.
+Save data point reached - logical record count 1980.
+Save data point reached - logical record count 1990.
+Save data point reached - logical record count 2000.
+Save data point reached - logical record count 2010.
+Save data point reached - logical record count 2020.
+Save data point reached - logical record count 2030.
+Save data point reached - logical record count 2040.
+Save data point reached - logical record count 2050.
+Save data point reached - logical record count 2060.
+Save data point reached - logical record count 2070.
+Save data point reached - logical record count 2080.
+Save data point reached - logical record count 2090.
+Save data point reached - logical record count 2100.
+Save data point reached - logical record count 2110.
+Save data point reached - logical record count 2120.
+Save data point reached - logical record count 2130.
+Save data point reached - logical record count 2140.
+Save data point reached - logical record count 2150.
+Save data point reached - logical record count 2160.
+Save data point reached - logical record count 2170.
+Save data point reached - logical record count 2180.
+Save data point reached - logical record count 2190.
+Save data point reached - logical record count 2200.
+Save data point reached - logical record count 2210.
+Save data point reached - logical record count 2220.
+Save data point reached - logical record count 2230.
+Save data point reached - logical record count 2240.
+Save data point reached - logical record count 2250.
+Save data point reached - logical record count 2260.
+Save data point reached - logical record count 2270.
+Save data point reached - logical record count 2280.
+Save data point reached - logical record count 2290.
+Save data point reached - logical record count 2300.
+Save data point reached - logical record count 2310.
+Save data point reached - logical record count 2320.
+Save data point reached - logical record count 2330.
+Save data point reached - logical record count 2340.
+Save data point reached - logical record count 2350.
+Save data point reached - logical record count 2360.
+Save data point reached - logical record count 2370.
+Save data point reached - logical record count 2380.
+Save data point reached - logical record count 2390.
+Save data point reached - logical record count 2400.
+Save data point reached - logical record count 2410.
+Save data point reached - logical record count 2420.
+Save data point reached - logical record count 2430.
+Save data point reached - logical record count 2440.
+Save data point reached - logical record count 2450.
+Save data point reached - logical record count 2460.
+Save data point reached - logical record count 2470.
+Save data point reached - logical record count 2480.
+Save data point reached - logical record count 2490.
+Save data point reached - logical record count 2500.
+Save data point reached - logical record count 2510.
+Save data point reached - logical record count 2520.
+Save data point reached - logical record count 2530.
+Save data point reached - logical record count 2540.
+Save data point reached - logical record count 2550.
+Save data point reached - logical record count 2560.
+Save data point reached - logical record count 2570.
+Save data point reached - logical record count 2580.
+Save data point reached - logical record count 2590.
+Save data point reached - logical record count 2600.
+Save data point reached - logical record count 2610.
+Save data point reached - logical record count 2620.
+Save data point reached - logical record count 2630.
+Save data point reached - logical record count 2640.
+Save data point reached - logical record count 2650.
+Save data point reached - logical record count 2660.
+Save data point reached - logical record count 2670.
+Save data point reached - logical record count 2680.
+Save data point reached - logical record count 2690.
+Save data point reached - logical record count 2700.
+Save data point reached - logical record count 2710.
+Save data point reached - logical record count 2720.
+Save data point reached - logical record count 2730.
+Save data point reached - logical record count 2740.
+Save data point reached - logical record count 2750.
+Save data point reached - logical record count 2760.
+Save data point reached - logical record count 2770.
+Save data point reached - logical record count 2780.
+Save data point reached - logical record count 2790.
+Save data point reached - logical record count 2800.
+Save data point reached - logical record count 2810.
+Save data point reached - logical record count 2820.
+Save data point reached - logical record count 2830.
+Save data point reached - logical record count 2840.
+Save data point reached - logical record count 2850.
+Save data point reached - logical record count 2860.
+Save data point reached - logical record count 2870.
+Save data point reached - logical record count 2880.
+Save data point reached - logical record count 2890.
+Save data point reached - logical record count 2900.
+Save data point reached - logical record count 2910.
+Save data point reached - logical record count 2920.
+Save data point reached - logical record count 2930.
+Save data point reached - logical record count 2940.
+Save data point reached - logical record count 2950.
+Save data point reached - logical record count 2960.
+Save data point reached - logical record count 2970.
+Save data point reached - logical record count 2980.
+Save data point reached - logical record count 2990.
+Save data point reached - logical record count 3000.
+Save data point reached - logical record count 3010.
+Save data point reached - logical record count 3020.
+Save data point reached - logical record count 3030.
+Save data point reached - logical record count 3040.
+Save data point reached - logical record count 3050.
+Save data point reached - logical record count 3060.
+Save data point reached - logical record count 3070.
+Save data point reached - logical record count 3080.
+Save data point reached - logical record count 3090.
+Save data point reached - logical record count 3100.
+Save data point reached - logical record count 3110.
+Save data point reached - logical record count 3120.
+Save data point reached - logical record count 3130.
+Save data point reached - logical record count 3140.
+Save data point reached - logical record count 3150.
+Save data point reached - logical record count 3160.
+Save data point reached - logical record count 3170.
+Save data point reached - logical record count 3180.
+Save data point reached - logical record count 3190.
+Save data point reached - logical record count 3200.
+Save data point reached - logical record count 3210.
+Save data point reached - logical record count 3220.
+Save data point reached - logical record count 3230.
+Save data point reached - logical record count 3240.
+Save data point reached - logical record count 3250.
+Save data point reached - logical record count 3260.
+Save data point reached - logical record count 3270.
+Save data point reached - logical record count 3280.
+Save data point reached - logical record count 3290.
+Save data point reached - logical record count 3300.
+Save data point reached - logical record count 3310.
+Save data point reached - logical record count 3320.
+Save data point reached - logical record count 3330.
+Save data point reached - logical record count 3340.
+Save data point reached - logical record count 3350.
+Save data point reached - logical record count 3360.
+Save data point reached - logical record count 3370.
+Save data point reached - logical record count 3380.
+Save data point reached - logical record count 3390.
+Save data point reached - logical record count 3400.
+Save data point reached - logical record count 3410.
+Save data point reached - logical record count 3420.
+Save data point reached - logical record count 3430.
+Save data point reached - logical record count 3440.
+Save data point reached - logical record count 3450.
+Save data point reached - logical record count 3460.
+Save data point reached - logical record count 3470.
+Save data point reached - logical record count 3480.
+Save data point reached - logical record count 3490.
+Save data point reached - logical record count 3500.
+Save data point reached - logical record count 3510.
+Save data point reached - logical record count 3520.
+Save data point reached - logical record count 3530.
+Save data point reached - logical record count 3540.
+Save data point reached - logical record count 3550.
+Save data point reached - logical record count 3560.
+Save data point reached - logical record count 3570.
+Save data point reached - logical record count 3580.
+Save data point reached - logical record count 3590.
+Save data point reached - logical record count 3600.
+Save data point reached - logical record count 3610.
+Save data point reached - logical record count 3620.
+Save data point reached - logical record count 3630.
+Save data point reached - logical record count 3640.
+Save data point reached - logical record count 3650.
+Save data point reached - logical record count 3660.
+Save data point reached - logical record count 3670.
+Save data point reached - logical record count 3680.
+Save data point reached - logical record count 3690.
+Save data point reached - logical record count 3700.
+Save data point reached - logical record count 3710.
+Save data point reached - logical record count 3720.
+Save data point reached - logical record count 3730.
+Save data point reached - logical record count 3740.
+Save data point reached - logical record count 3750.
+Save data point reached - logical record count 3760.
+Save data point reached - logical record count 3770.
+Save data point reached - logical record count 3780.
+Save data point reached - logical record count 3790.
+Save data point reached - logical record count 3800.
+Save data point reached - logical record count 3810.
+Save data point reached - logical record count 3820.
+Save data point reached - logical record count 3830.
+Save data point reached - logical record count 3840.
+Save data point reached - logical record count 3850.
+Save data point reached - logical record count 3860.
+Save data point reached - logical record count 3870.
+Save data point reached - logical record count 3880.
+Save data point reached - logical record count 3890.
+Save data point reached - logical record count 3900.
+Save data point reached - logical record count 3910.
+Save data point reached - logical record count 3920.
+Save data point reached - logical record count 3930.
+Save data point reached - logical record count 3940.
+Save data point reached - logical record count 3950.
+Save data point reached - logical record count 3960.
+Save data point reached - logical record count 3970.
+Save data point reached - logical record count 3980.
+Save data point reached - logical record count 3990.
+Save data point reached - logical record count 4000.
+Save data point reached - logical record count 4010.
+Save data point reached - logical record count 4020.
+Save data point reached - logical record count 4030.
+Save data point reached - logical record count 4040.
+Save data point reached - logical record count 4050.
+Save data point reached - logical record count 4060.
+Save data point reached - logical record count 4070.
+Save data point reached - logical record count 4080.
+Save data point reached - logical record count 4090.
+Save data point reached - logical record count 4100.
+Save data point reached - logical record count 4110.
+Save data point reached - logical record count 4120.
+Save data point reached - logical record count 4130.
+Save data point reached - logical record count 4140.
+Save data point reached - logical record count 4150.
+Save data point reached - logical record count 4160.
+Save data point reached - logical record count 4170.
+Save data point reached - logical record count 4180.
+Save data point reached - logical record count 4190.
+Save data point reached - logical record count 4200.
+Save data point reached - logical record count 4210.
+Save data point reached - logical record count 4220.
+Save data point reached - logical record count 4230.
+Save data point reached - logical record count 4240.
+Save data point reached - logical record count 4250.
+Save data point reached - logical record count 4260.
+Save data point reached - logical record count 4270.
+Save data point reached - logical record count 4280.
+Save data point reached - logical record count 4290.
+Save data point reached - logical record count 4300.
+Save data point reached - logical record count 4310.
+Save data point reached - logical record count 4320.
+Save data point reached - logical record count 4330.
+Save data point reached - logical record count 4340.
+Save data point reached - logical record count 4350.
+Save data point reached - logical record count 4360.
+Save data point reached - logical record count 4370.
+Save data point reached - logical record count 4380.
+Save data point reached - logical record count 4390.
+Save data point reached - logical record count 4400.
+Save data point reached - logical record count 4410.
+Save data point reached - logical record count 4420.
+Save data point reached - logical record count 4430.
+Save data point reached - logical record count 4440.
+Save data point reached - logical record count 4450.
+Save data point reached - logical record count 4460.
+Save data point reached - logical record count 4470.
+Save data point reached - logical record count 4480.
+Save data point reached - logical record count 4490.
+Save data point reached - logical record count 4500.
+
+Load completed - logical record count 4500.
+
+Table SUPPLEMENTARY_DEMOGRAPHICS:
+  4500 Rows successfully loaded.
+
+Check the log file:
+  /var/log/my-log/dem1v3.log
+for more information about the load.
+
+
+Commit complete.
+
+
+Enabling constraints ...
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Table altered.
+
+
+Creating additional indexes ...
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Create dimensions ...
+
+Dimension created.
+
+
+Commit complete.
+
+
+Dimension created.
+
+
+Dimension created.
+
+
+Dimension created.
+
+
+Dimension created.
+
+Creating MVs as tables ...
+
+
+View created.
+
+
+Table created.
+
+
+Table created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+
+Index created.
+
+Creating materialized views ...
+
+
+Materialized view created.
+
+
+Materialized view created.
+
+
+Creating comments ...
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+Comment created.
+
+
+gathering statistics ...
+BEGIN dbms_stats.gather_table_stats(          ownname          => 'SH'                     ,          tabname          => 'SALES_TRANSACTIONS_EXT' ,          partname         => NULL                     ,          estimate_percent => NULL                     ,          block_sample     => TRUE                     ,          method_opt       => 'FOR ALL COLUMNS SIZE 1' ,          degree           => NULL                     ,          granularity      => 'ALL'                    ,          cascade          => TRUE                     ,          stattab          => NULL                     ,          statid           => NULL                     ,          statown          => NULL                     ); END;
+
+*
+ERROR at line 1:
+ORA-29913: error in executing ODCIEXTTABLEOPEN callout
+ORA-06512: at "SYS.DBMS_STATS", line 39134
+ORA-06512: at "SYS.DBMS_STATS", line 38422
+ORA-06512: at "SYS.DBMS_STATS", line 37316
+ORA-06512: at "SYS.DBMS_STATS", line 35519
+ORA-06512: at "SYS.DBMS_STATS", line 29193
+ORA-29400: data cartridge error
+KUP-04005: error while accessing file /var/log/my-log/ext_1v3.log
+ORA-06512: at "SYS.DBMS_SQL", line 1735
+ORA-06512: at "SYS.DBMS_STATS", line 29110
+ORA-06512: at "SYS.DBMS_STATS", line 35251
+ORA-06512: at "SYS.DBMS_STATS", line 37152
+ORA-06512: at "SYS.DBMS_STATS", line 38141
+ORA-06512: at "SYS.DBMS_STATS", line 38570
+ORA-06512: at "SYS.DBMS_STATS", line 39116
+ORA-06512: at line 1
+
+
+
+PL/SQL procedure successfully completed.
+
+Connected.
+
+specify password for BI as parameter 1:
+
+specify default tablespeace for BI as parameter 2:
+
+specify temporary tablespace for BI as parameter 3:
+
+specify password for SYS as parameter 4:
+
+specify password for OE as parameter 5:
+
+specify password for SH as parameter 6:
+
+specify log path as parameter 7:
+
+specify version as parameter 8:
+
+specify connect string as parameter 9:
+
+Connected.
+DROP USER bi CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'BI' does not exist
+
+
+
+User created.
+
+
+User altered.
+
+
+User altered.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+specify password for oe as parameter 1:
+
+specify connect string as parameter 2:
+
+Connected.
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Commit complete.
+
+
+specify password for SH as parameter 1:
+
+specify connect string as parameter 2:
+
+Connected.
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Grant succeeded.
+
+
+Commit complete.
+
+
+specify password for BI as parameter 1:
+
+specify connect string as parameter 2:
+
+Connected.
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Synonym created.
+
+
+Commit complete.
+
+SQL> COLUMN TABLE_NAME FORMAT A25
+SQL> COLUMN COLUMN_NAME FORMAT A30
+SQL>
+SQL> CONNECT bi/&pwd_bi@&connect_string;
+Connected.
+SQL>
+SQL> SELECT COUNT(*) FROM customers;
+
+  COUNT(*)
+----------
+     55500
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM products;
+
+  COUNT(*)
+----------
+        72
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM promotions;
+
+  COUNT(*)
+----------
+       503
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM sales;
+
+  COUNT(*)
+----------
+    918843
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM costs;
+
+  COUNT(*)
+----------
+         0
+
+1 row selected.
+
+SQL>
+SQL> SELECT COUNT(*) FROM sh.cal_month_sales_mv;
+
+  COUNT(*)
+----------
+        48
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM sh.fweek_pscat_sales_mv;
+
+  COUNT(*)
+----------
+     11266
+
+1 row selected.
+
+SQL>
+SQL> SELECT COUNT(*) FROM channels;
+
+  COUNT(*)
+----------
+         5
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM countries;
+
+  COUNT(*)
+----------
+        23
+
+1 row selected.
+
+SQL> SELECT COUNT(*) FROM times;
+
+  COUNT(*)
+----------
+      1826
+
+1 row selected.
+
+SQL>
+SQL> SET ECHO OFF
+Connected.
+
+specify password for SYSTEM as parameter 1:
+
+specify spool filename as parameter 2:
+
+specify connect string as parameter 3:
+
+Connected.
+
+Table analyzed.
+
+
+Table analyzed.
+
+
+Table analyzed.
+
+
+Table analyzed.
+
+
+Table analyzed.
+
+
+All named objects and stati
+
+OWNER  OBJECT_TYPE          OBJECT_NAME                    SUBOBJECT_NAME   STATUS
+------ -------------------- ------------------------------ ---------------- --------
+BI     SYNONYM              CHANNELS                                        VALID
+BI     SYNONYM              COSTS                                           VALID
+BI     SYNONYM              COUNTRIES                                       VALID
+BI     SYNONYM              CUSTOMERS                                       VALID
+BI     SYNONYM              PRODUCTS                                        VALID
+BI     SYNONYM              PROMOTIONS                                      VALID
+BI     SYNONYM              SALES                                           VALID
+BI     SYNONYM              TIMES                                           VALID
+HR     INDEX                COUNTRY_C_ID_PK                                 VALID
+HR     INDEX                DEPT_ID_PK                                      VALID
+HR     INDEX                DEPT_LOCATION_IX                                VALID
+HR     INDEX                EMP_DEPARTMENT_IX                               VALID
+HR     INDEX                EMP_EMAIL_UK                                    VALID
+HR     INDEX                EMP_EMP_ID_PK                                   VALID
+HR     INDEX                EMP_JOB_IX                                      VALID
+HR     INDEX                EMP_MANAGER_IX                                  VALID
+HR     INDEX                EMP_NAME_IX                                     VALID
+HR     INDEX                JHIST_DEPARTMENT_IX                             VALID
+HR     INDEX                JHIST_EMPLOYEE_IX                               VALID
+HR     INDEX                JHIST_EMP_ID_ST_DATE_PK                         VALID
+HR     INDEX                JHIST_JOB_IX                                    VALID
+HR     INDEX                JOB_ID_PK                                       VALID
+HR     INDEX                LOC_CITY_IX                                     VALID
+HR     INDEX                LOC_COUNTRY_IX                                  VALID
+HR     INDEX                LOC_ID_PK                                       VALID
+HR     INDEX                LOC_STATE_PROVINCE_IX                           VALID
+HR     INDEX                REG_ID_PK                                       VALID
+HR     PROCEDURE            ADD_JOB_HISTORY                                 VALID
+HR     PROCEDURE            SECURE_DML                                      VALID
+HR     SEQUENCE             DEPARTMENTS_SEQ                                 VALID
+HR     SEQUENCE             EMPLOYEES_SEQ                                   VALID
+HR     SEQUENCE             LOCATIONS_SEQ                                   VALID
+HR     TABLE                COUNTRIES                                       VALID
+HR     TABLE                DEPARTMENTS                                     VALID
+HR     TABLE                EMPLOYEES                                       VALID
+HR     TABLE                JOBS                                            VALID
+HR     TABLE                JOB_HISTORY                                     VALID
+HR     TABLE                LOCATIONS                                       VALID
+HR     TABLE                REGIONS                                         VALID
+HR     TRIGGER              SECURE_EMPLOYEES                                VALID
+HR     TRIGGER              UPDATE_JOB_HISTORY                              VALID
+HR     VIEW                 EMP_DETAILS_VIEW                                VALID
+IX     EVALUATION CONTEXT   AQ$_ORDERS_QUEUETABLE_V                         VALID
+IX     EVALUATION CONTEXT   AQ$_STREAMS_QUEUE_TABLE_V                       VALID
+IX     INDEX                AQ$_STREAMS_QUEUE_TABLE_Y                       VALID
+IX     QUEUE                AQ$_ORDERS_QUEUETABLE_E                         VALID
+IX     QUEUE                AQ$_STREAMS_QUEUE_TABLE_E                       VALID
+IX     QUEUE                ORDERS_QUEUE                                    VALID
+IX     QUEUE                STREAMS_QUEUE                                   VALID
+IX     RULE SET             ORDERS_QUEUE_N                                  VALID
+IX     RULE SET             ORDERS_QUEUE_R                                  VALID
+IX     RULE SET             STREAMS_QUEUE_N                                 VALID
+IX     RULE SET             STREAMS_QUEUE_R                                 VALID
+IX     SEQUENCE             AQ$_ORDERS_QUEUETABLE_N                         VALID
+IX     SEQUENCE             AQ$_STREAMS_QUEUE_TABLE_N                       VALID
+IX     TABLE                AQ$_ORDERS_QUEUETABLE_G                         VALID
+IX     TABLE                AQ$_ORDERS_QUEUETABLE_H                         VALID
+IX     TABLE                AQ$_ORDERS_QUEUETABLE_I                         VALID
+IX     TABLE                AQ$_ORDERS_QUEUETABLE_L                         VALID
+IX     TABLE                AQ$_ORDERS_QUEUETABLE_S                         VALID
+IX     TABLE                AQ$_ORDERS_QUEUETABLE_T                         VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_C                       VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_G                       VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_H                       VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_I                       VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_L                       VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_S                       VALID
+IX     TABLE                AQ$_STREAMS_QUEUE_TABLE_T                       VALID
+IX     TABLE                ORDERS_QUEUETABLE                               VALID
+IX     TABLE                STREAMS_QUEUE_TABLE                             VALID
+IX     TYPE                 ORDER_EVENT_TYP                                 VALID
+IX     VIEW                 AQ$ORDERS_QUEUETABLE                            VALID
+IX     VIEW                 AQ$ORDERS_QUEUETABLE_R                          VALID
+IX     VIEW                 AQ$ORDERS_QUEUETABLE_S                          VALID
+IX     VIEW                 AQ$STREAMS_QUEUE_TABLE                          VALID
+IX     VIEW                 AQ$STREAMS_QUEUE_TABLE_R                        VALID
+IX     VIEW                 AQ$STREAMS_QUEUE_TABLE_S                        VALID
+IX     VIEW                 AQ$_ORDERS_QUEUETABLE_F                         VALID
+IX     VIEW                 AQ$_STREAMS_QUEUE_TABLE_F                       VALID
+OE     FUNCTION             GET_PHONE_NUMBER_F                              VALID
+OE     INDEX                ACTION_TABLE_MEMBERS                            VALID
+OE     INDEX                CUSTOMERS_PK                                    VALID
+OE     INDEX                CUST_ACCOUNT_MANAGER_IX                         VALID
+OE     INDEX                CUST_EMAIL_IX                                   VALID
+OE     INDEX                CUST_LNAME_IX                                   VALID
+OE     INDEX                CUST_UPPER_NAME_IX                              VALID
+OE     INDEX                INVENTORY_IX                                    VALID
+OE     INDEX                INV_PRODUCT_IX                                  VALID
+OE     INDEX                ITEM_ORDER_IX                                   VALID
+OE     INDEX                ITEM_PRODUCT_IX                                 VALID
+OE     INDEX                LINEITEM_TABLE_MEMBERS                          VALID
+OE     INDEX                ORDER_ITEMS_PK                                  VALID
+OE     INDEX                ORDER_ITEMS_UK                                  VALID
+OE     INDEX                ORDER_PK                                        VALID
+OE     INDEX                ORD_CUSTOMER_IX                                 VALID
+OE     INDEX                ORD_ORDER_DATE_IX                               VALID
+OE     INDEX                ORD_SALES_REP_IX                                VALID
+OE     INDEX                PRD_DESC_PK                                     VALID
+OE     INDEX                PRODUCT_INFORMATION_PK                          VALID
+OE     INDEX                PROD_NAME_IX                                    VALID
+OE     INDEX                PROD_SUPPLIER_IX                                VALID
+OE     INDEX                PROMO_ID_PK                                     VALID
+OE     INDEX                WAREHOUSES_PK                                   VALID
+OE     INDEX                WHS_LOCATION_IX                                 VALID
+OE     LOB                  EXTRADATA46_L                                   VALID
+OE     LOB                  NAMESPACES47_L                                  VALID
+OE     SEQUENCE             ORDERS_SEQ                                      VALID
+OE     SYNONYM              COUNTRIES                                       VALID
+OE     SYNONYM              DEPARTMENTS                                     VALID
+OE     SYNONYM              EMPLOYEES                                       VALID
+OE     SYNONYM              JOBS                                            VALID
+OE     SYNONYM              JOB_HISTORY                                     VALID
+OE     SYNONYM              LOCATIONS                                       VALID
+OE     TABLE                ACTION_TABLE                                    VALID
+OE     TABLE                CATEGORIES_TAB                                  VALID
+OE     TABLE                CUSTOMERS                                       VALID
+OE     TABLE                INVENTORIES                                     VALID
+OE     TABLE                LINEITEM_TABLE                                  VALID
+OE     TABLE                ORDERS                                          VALID
+OE     TABLE                ORDER_ITEMS                                     VALID
+OE     TABLE                PRODUCT_DESCRIPTIONS                            VALID
+OE     TABLE                PRODUCT_INFORMATION                             VALID
+OE     TABLE                PRODUCT_REF_LIST_NESTEDTAB                      VALID
+OE     TABLE                PROMOTIONS                                      VALID
+OE     TABLE                PURCHASEORDER                                   VALID
+OE     TABLE                SUBCATEGORY_REF_LIST_NESTEDTAB                  VALID
+OE     TABLE                WAREHOUSES                                      VALID
+OE     TRIGGER              INSERT_ORD_LINE                                 VALID
+OE     TRIGGER              ORDERS_ITEMS_TRG                                VALID
+OE     TRIGGER              ORDERS_TRG                                      VALID
+OE     TRIGGER              PURCHASEORDER$xd                                VALID
+OE     TYPE                 ACTIONS_T                                       VALID
+OE     TYPE                 ACTION_T                                        VALID
+OE     TYPE                 ACTION_V                                        VALID
+OE     TYPE                 CATALOG_TYP                    $VSN_1           VALID
+OE     TYPE                 CATALOG_TYP                                     VALID
+OE     TYPE                 CATEGORY_TYP                   $VSN_1           VALID
+OE     TYPE                 CATEGORY_TYP                                    VALID
+OE     TYPE                 COMPOSITE_CATEGORY_TYP         $VSN_1           VALID
+OE     TYPE                 COMPOSITE_CATEGORY_TYP                          VALID
+OE     TYPE                 CORPORATE_CUSTOMER_TYP                          VALID
+OE     TYPE                 CUSTOMER_TYP                                    VALID
+OE     TYPE                 CUST_ADDRESS_TYP                                VALID
+OE     TYPE                 INVENTORY_LIST_TYP                              VALID
+OE     TYPE                 INVENTORY_TYP                                   VALID
+OE     TYPE                 LEAF_CATEGORY_TYP              $VSN_1           VALID
+OE     TYPE                 LEAF_CATEGORY_TYP                               VALID
+OE     TYPE                 LINEITEMS_T                                     VALID
+OE     TYPE                 LINEITEM_T                                      VALID
+OE     TYPE                 LINEITEM_V                                      VALID
+OE     TYPE                 ORDER_ITEM_LIST_TYP                             VALID
+OE     TYPE                 ORDER_ITEM_TYP                                  VALID
+OE     TYPE                 ORDER_LIST_TYP                                  VALID
+OE     TYPE                 ORDER_TYP                                       VALID
+OE     TYPE                 PART_T                                          VALID
+OE     TYPE                 PHONE_LIST_TYP                                  VALID
+OE     TYPE                 PRODUCT_INFORMATION_TYP                         VALID
+OE     TYPE                 PRODUCT_REF_LIST_TYP                            VALID
+OE     TYPE                 PURCHASEORDER_T                                 VALID
+OE     TYPE                 REJECTION_T                                     VALID
+OE     TYPE                 SHIPPING_INSTRUCTIONS_T                         VALID
+OE     TYPE                 SUBCATEGORY_REF_LIST_TYP                        VALID
+OE     TYPE                 WAREHOUSE_TYP                                   VALID
+OE     TYPE BODY            CATALOG_TYP                                     VALID
+OE     TYPE BODY            COMPOSITE_CATEGORY_TYP                          VALID
+OE     TYPE BODY            LEAF_CATEGORY_TYP                               VALID
+OE     VIEW                 ACCOUNT_MANAGERS                                VALID
+OE     VIEW                 BOMBAY_INVENTORY                                VALID
+OE     VIEW                 CUSTOMERS_VIEW                                  VALID
+OE     VIEW                 OC_CORPORATE_CUSTOMERS                          VALID
+OE     VIEW                 OC_CUSTOMERS                                    VALID
+OE     VIEW                 OC_INVENTORIES                                  VALID
+OE     VIEW                 OC_ORDERS                                       VALID
+OE     VIEW                 OC_PRODUCT_INFORMATION                          VALID
+OE     VIEW                 ORDERS_VIEW                                     VALID
+OE     VIEW                 PRODUCTS                                        VALID
+OE     VIEW                 PRODUCT_PRICES                                  VALID
+OE     VIEW                 SYDNEY_INVENTORY                                VALID
+OE     VIEW                 TORONTO_INVENTORY                               VALID
+PM     INDEX                PRINTMEDIA_PK                                   VALID
+PM     TABLE                PRINT_MEDIA                                     VALID
+PM     TABLE                TEXTDOCS_NESTEDTAB                              VALID
+PM     TYPE                 ADHEADER_TYP                                    VALID
+PM     TYPE                 TEXTDOC_TAB                                     VALID
+PM     TYPE                 TEXTDOC_TYP                                     VALID
+SH     DIMENSION            CHANNELS_DIM                                    VALID
+SH     DIMENSION            CUSTOMERS_DIM                                   VALID
+SH     DIMENSION            PRODUCTS_DIM                                    VALID
+SH     DIMENSION            PROMOTIONS_DIM                                  VALID
+SH     DIMENSION            TIMES_DIM                                       VALID
+SH     INDEX                CHANNELS_PK                                     VALID
+SH     INDEX                COSTS_PROD_BIX                                  VALID
+SH     INDEX                COSTS_TIME_BIX                                  VALID
+SH     INDEX                COUNTRIES_PK                                    VALID
+SH     INDEX                CUSTOMERS_GENDER_BIX                            VALID
+SH     INDEX                CUSTOMERS_MARITAL_BIX                           VALID
+SH     INDEX                CUSTOMERS_PK                                    VALID
+SH     INDEX                CUSTOMERS_YOB_BIX                               VALID
+SH     INDEX                DR$SUP_TEXT_IDX$KD                              VALID
+SH     INDEX                DR$SUP_TEXT_IDX$KR                              VALID
+SH     INDEX                DR$SUP_TEXT_IDX$X                               VALID
+SH     INDEX                FW_PSC_S_MV_CHAN_BIX                            VALID
+SH     INDEX                FW_PSC_S_MV_PROMO_BIX                           VALID
+SH     INDEX                FW_PSC_S_MV_SUBCAT_BIX                          VALID
+SH     INDEX                FW_PSC_S_MV_WD_BIX                              VALID
+SH     INDEX                PRODUCTS_PK                                     VALID
+SH     INDEX                PRODUCTS_PROD_CAT_IX                            VALID
+SH     INDEX                PRODUCTS_PROD_STATUS_BIX                        VALID
+SH     INDEX                PRODUCTS_PROD_SUBCAT_IX                         VALID
+SH     INDEX                PROMO_PK                                        VALID
+SH     INDEX                SALES_CHANNEL_BIX                               VALID
+SH     INDEX                SALES_CUST_BIX                                  VALID
+SH     INDEX                SALES_PROD_BIX                                  VALID
+SH     INDEX                SALES_PROMO_BIX                                 VALID
+SH     INDEX                SALES_TIME_BIX                                  VALID
+SH     INDEX                SUP_TEXT_IDX                                    VALID
+SH     INDEX                TIMES_PK                                        VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_1995       VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_1996       VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_H1_1997    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_H2_1997    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q1_1998    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q1_1999    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q1_2000    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q1_2001    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q1_2002    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q1_2003    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q2_1998    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q2_1999    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q2_2000    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q2_2001    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q2_2002    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q2_2003    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q3_1998    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q3_1999    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q3_2000    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q3_2001    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q3_2002    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q3_2003    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q4_1998    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q4_1999    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q4_2000    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q4_2001    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q4_2002    VALID
+SH     INDEX PARTITION      COSTS_PROD_BIX                 COSTS_Q4_2003    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_1995       VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_1996       VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_H1_1997    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_H2_1997    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q1_1998    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q1_1999    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q1_2000    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q1_2001    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q1_2002    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q1_2003    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q2_1998    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q2_1999    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q2_2000    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q2_2001    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q2_2002    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q2_2003    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q3_1998    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q3_1999    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q3_2000    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q3_2001    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q3_2002    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q3_2003    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q4_1998    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q4_1999    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q4_2000    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q4_2001    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q4_2002    VALID
+SH     INDEX PARTITION      COSTS_TIME_BIX                 COSTS_Q4_2003    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_1995       VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_1996       VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_H1_1997    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_H2_1997    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q1_1998    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q1_1999    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q1_2000    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q1_2001    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q1_2002    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q1_2003    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q2_1998    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q2_1999    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q2_2000    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q2_2001    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q2_2002    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q2_2003    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q3_1998    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q3_1999    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q3_2000    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q3_2001    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q3_2002    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q3_2003    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q4_1998    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q4_1999    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q4_2000    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q4_2001    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q4_2002    VALID
+SH     INDEX PARTITION      SALES_CHANNEL_BIX              SALES_Q4_2003    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_1995       VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_1996       VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_H1_1997    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_H2_1997    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q1_1998    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q1_1999    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q1_2000    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q1_2001    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q1_2002    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q1_2003    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q2_1998    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q2_1999    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q2_2000    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q2_2001    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q2_2002    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q2_2003    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q3_1998    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q3_1999    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q3_2000    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q3_2001    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q3_2002    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q3_2003    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q4_1998    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q4_1999    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q4_2000    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q4_2001    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q4_2002    VALID
+SH     INDEX PARTITION      SALES_CUST_BIX                 SALES_Q4_2003    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_1995       VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_1996       VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_H1_1997    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_H2_1997    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q1_1998    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q1_1999    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q1_2000    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q1_2001    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q1_2002    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q1_2003    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q2_1998    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q2_1999    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q2_2000    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q2_2001    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q2_2002    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q2_2003    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q3_1998    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q3_1999    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q3_2000    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q3_2001    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q3_2002    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q3_2003    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q4_1998    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q4_1999    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q4_2000    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q4_2001    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q4_2002    VALID
+SH     INDEX PARTITION      SALES_PROD_BIX                 SALES_Q4_2003    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_1995       VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_1996       VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_H1_1997    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_H2_1997    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q1_1998    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q1_1999    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q1_2000    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q1_2001    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q1_2002    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q1_2003    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q2_1998    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q2_1999    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q2_2000    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q2_2001    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q2_2002    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q2_2003    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q3_1998    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q3_1999    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q3_2000    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q3_2001    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q3_2002    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q3_2003    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q4_1998    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q4_1999    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q4_2000    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q4_2001    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q4_2002    VALID
+SH     INDEX PARTITION      SALES_PROMO_BIX                SALES_Q4_2003    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_1995       VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_1996       VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_H1_1997    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_H2_1997    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q1_1998    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q1_1999    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q1_2000    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q1_2001    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q1_2002    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q1_2003    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q2_1998    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q2_1999    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q2_2000    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q2_2001    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q2_2002    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q2_2003    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q3_1998    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q3_1999    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q3_2000    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q3_2001    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q3_2002    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q3_2003    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q4_1998    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q4_1999    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q4_2000    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q4_2001    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q4_2002    VALID
+SH     INDEX PARTITION      SALES_TIME_BIX                 SALES_Q4_2003    VALID
+SH     MATERIALIZED VIEW    CAL_MONTH_SALES_MV                              VALID
+SH     MATERIALIZED VIEW    FWEEK_PSCAT_SALES_MV                            VALID
+SH     TABLE                CAL_MONTH_SALES_MV                              VALID
+SH     TABLE                CHANNELS                                        VALID
+SH     TABLE                COSTS                                           VALID
+SH     TABLE                COUNTRIES                                       VALID
+SH     TABLE                CUSTOMERS                                       VALID
+SH     TABLE                DR$SUP_TEXT_IDX$I                               VALID
+SH     TABLE                DR$SUP_TEXT_IDX$K                               VALID
+SH     TABLE                DR$SUP_TEXT_IDX$N                               VALID
+SH     TABLE                DR$SUP_TEXT_IDX$U                               VALID
+SH     TABLE                FWEEK_PSCAT_SALES_MV                            VALID
+SH     TABLE                PRODUCTS                                        VALID
+SH     TABLE                PROMOTIONS                                      VALID
+SH     TABLE                SALES                                           VALID
+SH     TABLE                SALES_TRANSACTIONS_EXT                          VALID
+SH     TABLE                SUPPLEMENTARY_DEMOGRAPHICS                      VALID
+SH     TABLE                TIMES                                           VALID
+SH     TABLE PARTITION      COSTS                          COSTS_1995       VALID
+SH     TABLE PARTITION      COSTS                          COSTS_1996       VALID
+SH     TABLE PARTITION      COSTS                          COSTS_H1_1997    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_H2_1997    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q1_1998    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q1_1999    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q1_2000    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q1_2001    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q1_2002    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q1_2003    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q2_1998    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q2_1999    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q2_2000    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q2_2001    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q2_2002    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q2_2003    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q3_1998    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q3_1999    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q3_2000    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q3_2001    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q3_2002    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q3_2003    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q4_1998    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q4_1999    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q4_2000    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q4_2001    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q4_2002    VALID
+SH     TABLE PARTITION      COSTS                          COSTS_Q4_2003    VALID
+SH     TABLE PARTITION      SALES                          SALES_1995       VALID
+SH     TABLE PARTITION      SALES                          SALES_1996       VALID
+SH     TABLE PARTITION      SALES                          SALES_H1_1997    VALID
+SH     TABLE PARTITION      SALES                          SALES_H2_1997    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q1_1998    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q1_1999    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q1_2000    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q1_2001    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q1_2002    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q1_2003    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q2_1998    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q2_1999    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q2_2000    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q2_2001    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q2_2002    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q2_2003    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q3_1998    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q3_1999    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q3_2000    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q3_2001    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q3_2002    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q3_2003    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q4_1998    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q4_1999    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q4_2000    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q4_2001    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q4_2002    VALID
+SH     TABLE PARTITION      SALES                          SALES_Q4_2003    VALID
+SH     VIEW                 PROFITS                                         VALID
+
+488 rows selected.
+
+
+Data types used
+
+OWNER  DATA_TYPE                           DATA_TYPE_OWNER  DAT   COUNT(*)
+------ ----------------------------------- ---------------- --- ----------
+PM     ADHEADER_TYP                        PM                            1
+IX     ANYDATA                             SYS                           7
+IX     AQ$_SIG_PROP                        SYS                           4
+PM     BFILE                                                             1
+PM     BLOB                                                              2
+SH     BLOB                                                              1
+HR     CHAR                                                              3
+IX     CHAR                                                              2
+OE     CHAR                                                              2
+SH     CHAR                                                              5
+IX     CLOB                                                              2
+PM     CLOB                                                              2
+OE     CUSTOMER_TYP                        OE               REF          1
+OE     CUST_ADDRESS_TYP                    OE                            3
+HR     DATE                                                              3
+IX     DATE                                                              6
+OE     DATE                                                              2
+SH     DATE                                                             19
+OE     INTERVAL YEAR(2) TO MONTH                                         3
+OE     INVENTORY_LIST_TYP                  OE                            1
+PM     NCLOB                                                             1
+HR     NUMBER                                                           21
+IX     NUMBER                                                          107
+OE     NUMBER                                                           80
+PM     NUMBER                                                            2
+SH     NUMBER                                                          100
+OE     NVARCHAR2                                                         7
+IX     ORDER_EVENT_TYP                     IX                            3
+OE     ORDER_ITEM_LIST_TYP                 OE                            1
+OE     ORDER_LIST_TYP                      OE                            2
+OE     PHONE_LIST_TYP                      OE                            3
+IX     RAW                                                              32
+IX     ROWID                                                             6
+SH     ROWID                                                             2
+OE     SDO_GEOMETRY                        MDSYS                         2
+PM     TEXTDOC_TAB                         PM                            1
+IX     TIMESTAMP(6)                                                     25
+OE     TIMESTAMP(6) WITH LOCAL TIME ZONE                                 1
+IX     TIMESTAMP(6) WITH TIME ZONE                                       8
+IX     TIMESTAMP(9)                                                      2
+HR     VARCHAR2                                                         24
+IX     VARCHAR2                                                        128
+OE     VARCHAR2                                                         53
+SH     VARCHAR2                                                         47
+OE     WAREHOUSE_TYP                       OE                            1
+OE     XMLTYPE                             SYS                           2
+
+46 rows selected.
+
+
+XML tables
+
+OWNER  TABLE_NAME                     SCHEMA_OWNER     STORAGE_TYPE
+------ ------------------------------ ---------------- --------------------
+OE     PURCHASEORDER                  OE               OBJECT-RELATIONAL
+
+1 row selected.
+
+
+All objects named 'SYS%' (LOBs etc)
+
+OWNER  OBJECT_TYPE          STATUS     COUNT(*)
+------ -------------------- -------- ----------
+IX     INDEX                VALID            16
+OE     INDEX                VALID            24
+PM     INDEX                VALID             9
+SH     INDEX                VALID             3
+IX     LOB                  VALID             3
+OE     LOB                  VALID            13
+PM     LOB                  VALID             7
+SH     LOB                  VALID             1
+IX     TABLE                VALID             2
+OE     TYPE                 VALID             5
+
+10 rows selected.
+
+
+All constraints
+
+OWNER  CONSTRAINT_TYPE      STATUS   VALIDATED        GENERATED          COUNT(*)
+------ -------------------- -------- ---------------- ---------------- ----------
+IX     Check or Not Null    ENABLED  VALIDATED        GENERATED NAME            4
+OE     Check or Not Null    ENABLED  VALIDATED        GENERATED NAME            2
+SH     Check or Not Null    ENABLED  VALIDATED        GENERATED NAME          121
+HR     Check or Not Null    ENABLED  VALIDATED        USER NAME                15
+OE     Check or Not Null    ENABLED  VALIDATED        USER NAME                13
+SH     Foreign key          DISABLED NOT VALIDATED    USER NAME                 2
+OE     Foreign key          ENABLED  NOT VALIDATED    USER NAME                 2
+SH     Foreign key          ENABLED  NOT VALIDATED    USER NAME                 8
+HR     Foreign key          ENABLED  VALIDATED        USER NAME                10
+OE     Foreign key          ENABLED  VALIDATED        USER NAME                 7
+PM     Foreign key          ENABLED  VALIDATED        USER NAME                 1
+SH     Primary key          DISABLED NOT VALIDATED    USER NAME                 1
+SH     Primary key          ENABLED  NOT VALIDATED    USER NAME                 6
+IX     Primary key          ENABLED  VALIDATED        GENERATED NAME           13
+OE     Primary key          ENABLED  VALIDATED        GENERATED NAME            3
+SH     Primary key          ENABLED  VALIDATED        GENERATED NAME            2
+HR     Primary key          ENABLED  VALIDATED        USER NAME                 7
+OE     Primary key          ENABLED  VALIDATED        USER NAME                 8
+PM     Primary key          ENABLED  VALIDATED        USER NAME                 1
+HR     Read only view       ENABLED  NOT VALIDATED    GENERATED NAME            1
+IX     Read only view       ENABLED  NOT VALIDATED    GENERATED NAME            8
+OE     Unique key           ENABLED  VALIDATED        GENERATED NAME            6
+PM     Unique key           ENABLED  VALIDATED        GENERATED NAME            1
+HR     Unique key           ENABLED  VALIDATED        USER NAME                 1
+
+24 rows selected.
+
+
+All dimensions
+
+OWNER  DIMENSION_NAME       I COMPILE_STATE
+------ -------------------- - -------------
+SH     CHANNELS_DIM         N VALID
+SH     CUSTOMERS_DIM        N VALID
+SH     PRODUCTS_DIM         N VALID
+SH     PROMOTIONS_DIM       N VALID
+SH     TIMES_DIM            N VALID
+
+5 rows selected.
+
+
+All granted roles
+
+GRANTED_ROLE              GRANTEE
+------------------------- -------
+AQ_ADMINISTRATOR_ROLE     IX
+AQ_USER_ROLE              IX
+CONNECT                   IX
+CONNECT                   PM
+RESOURCE                  BI
+RESOURCE                  HR
+RESOURCE                  IX
+RESOURCE                  OE
+RESOURCE                  PM
+RESOURCE                  SH
+SELECT_CATALOG_ROLE       IX
+SELECT_CATALOG_ROLE       SH
+XDBADMIN                  OE
+
+13 rows selected.
+
+
+All granted system privileges
+
+PRIVILEGE                 GRANTEE
+------------------------- -------
+ALTER SESSION             BI
+ALTER SESSION             HR
+ALTER SESSION             IX
+ALTER SESSION             SH
+CREATE CLUSTER            BI
+CREATE CLUSTER            IX
+CREATE CLUSTER            SH
+CREATE DATABASE LINK      BI
+CREATE DATABASE LINK      HR
+CREATE DATABASE LINK      IX
+CREATE DATABASE LINK      OE
+CREATE DATABASE LINK      SH
+CREATE DIMENSION          SH
+CREATE INDEXTYPE          IX
+CREATE MATERIALIZED VIEW  OE
+CREATE MATERIALIZED VIEW  SH
+CREATE OPERATOR           IX
+CREATE PROCEDURE          IX
+CREATE RULE               IX
+CREATE RULE SET           IX
+CREATE SEQUENCE           BI
+CREATE SEQUENCE           HR
+CREATE SEQUENCE           IX
+CREATE SEQUENCE           SH
+CREATE SESSION            BI
+CREATE SESSION            HR
+CREATE SESSION            IX
+CREATE SESSION            OE
+CREATE SESSION            SH
+CREATE SYNONYM            BI
+CREATE SYNONYM            HR
+CREATE SYNONYM            IX
+CREATE SYNONYM            OE
+CREATE SYNONYM            SH
+CREATE TABLE              BI
+CREATE TABLE              IX
+CREATE TABLE              SH
+CREATE TRIGGER            IX
+CREATE TYPE               IX
+CREATE VIEW               BI
+CREATE VIEW               HR
+CREATE VIEW               IX
+CREATE VIEW               OE
+CREATE VIEW               SH
+QUERY REWRITE             OE
+QUERY REWRITE             SH
+SELECT ANY DICTIONARY     IX
+UNLIMITED TABLESPACE      BI
+UNLIMITED TABLESPACE      HR
+UNLIMITED TABLESPACE      IX
+UNLIMITED TABLESPACE      OE
+UNLIMITED TABLESPACE      PM
+UNLIMITED TABLESPACE      SH
+
+53 rows selected.
+
+
+All granted object privileges
+
+OWNER  TABLE_NAME                     PRIVILEGE                 GRANTEE
+------ ------------------------------ ------------------------- -------
+HR     COUNTRIES                      REFERENCES                OE
+HR     COUNTRIES                      SELECT                    OE
+HR     DEPARTMENTS                    SELECT                    OE
+HR     EMPLOYEES                      REFERENCES                OE
+HR     EMPLOYEES                      SELECT                    OE
+HR     JOBS                           SELECT                    OE
+HR     JOB_HISTORY                    SELECT                    OE
+HR     LOCATIONS                      REFERENCES                OE
+HR     LOCATIONS                      SELECT                    OE
+OE     BOMBAY_INVENTORY               SELECT                    BI
+OE     CUSTOMERS                      SELECT                    BI
+OE     CUSTOMERS                      SELECT                    PM
+OE     INVENTORIES                    SELECT                    BI
+OE     INVENTORIES                    SELECT                    PM
+OE     ORDERS                         SELECT                    BI
+OE     ORDERS                         SELECT                    PM
+OE     ORDER_ITEMS                    SELECT                    BI
+OE     ORDER_ITEMS                    SELECT                    PM
+OE     PRODUCTS                       SELECT                    BI
+OE     PRODUCT_DESCRIPTIONS           SELECT                    BI
+OE     PRODUCT_DESCRIPTIONS           SELECT                    PM
+OE     PRODUCT_INFORMATION            REFERENCES                PM
+OE     PRODUCT_INFORMATION            SELECT                    BI
+OE     PRODUCT_INFORMATION            SELECT                    PM
+OE     PRODUCT_PRICES                 SELECT                    BI
+OE     PROMOTIONS                     SELECT                    BI
+OE     SYDNEY_INVENTORY               SELECT                    BI
+OE     TORONTO_INVENTORY              SELECT                    BI
+OE     WAREHOUSES                     SELECT                    BI
+OE     WAREHOUSES                     SELECT                    PM
+SH     CAL_MONTH_SALES_MV             SELECT                    BI
+SH     CHANNELS                       SELECT                    BI
+SH     COSTS                          SELECT                    BI
+SH     COUNTRIES                      SELECT                    BI
+SH     CUSTOMERS                      SELECT                    BI
+SH     FWEEK_PSCAT_SALES_MV           SELECT                    BI
+SH     PRODUCTS                       SELECT                    BI
+SH     PROMOTIONS                     SELECT                    BI
+SH     SALES                          SELECT                    BI
+SH     TIMES                          SELECT                    BI
+SYS    AQ$_UNFLUSHED_DEQUEUES         SELECT                    IX
+SYS    DATA_FILE_DIR                  READ                      SH
+SYS    DBMS_APPLY_ADM                 EXECUTE                   IX
+SYS    DBMS_AQ                        EXECUTE                   IX
+SYS    DBMS_AQADM                     EXECUTE                   IX
+SYS    DBMS_AQ_BQVIEW                 EXECUTE                   IX
+SYS    DBMS_CAPTURE_ADM               EXECUTE                   IX
+SYS    DBMS_FLASHBACK                 EXECUTE                   IX
+SYS    DBMS_PROPAGATION_ADM           EXECUTE                   IX
+SYS    DBMS_STATS                     EXECUTE                   HR
+SYS    DBMS_STATS                     EXECUTE                   IX
+SYS    DBMS_STATS                     EXECUTE                   OE
+SYS    DBMS_STATS                     EXECUTE                   PM
+SYS    DBMS_STATS                     EXECUTE                   SH
+SYS    DBMS_STREAMS_ADM               EXECUTE                   IX
+SYS    LOG_FILE_DIR                   READ                      SH
+SYS    LOG_FILE_DIR                   WRITE                     SH
+SYS    MEDIA_DIR                      READ                      PM
+SYS    QT73636_BUFFER                 SELECT                    IX
+SYS    QT73663_BUFFER                 SELECT                    IX
+SYS    SS_OE_XMLDIR                   READ                      OE
+SYS    SS_OE_XMLDIR                   WRITE                     OE
+SYS    SUBDIR                         READ                      OE
+SYS    SUBDIR                         WRITE                     OE
+
+64 rows selected.
+
+
+Space usage
+
+OWNER  SEGMENT_TYPE         SUM(BYTES)
+------ -------------------- ----------
+HR     INDEX                   1245184
+HR     TABLE                    393216
+HR                             1638400
+IX     INDEX                    917504
+IX     TABLE                    524288
+IX     LOBINDEX                 196608
+IX     LOBSEGMENT               393216
+IX                             2031616
+OE     INDEX                   3014656
+OE     TABLE                   3932160
+OE     LOBINDEX                 983040
+OE     LOBSEGMENT              1966080
+OE     NESTED TABLE             589824
+OE                            10485760
+PM     INDEX                    196608
+PM     TABLE                     65536
+PM     LOBINDEX                 458752
+PM     LOBSEGMENT              5373952
+PM     NESTED TABLE              65536
+PM                             6160384
+SH     INDEX                   2424832
+SH     TABLE                  19791872
+SH     LOBINDEX                  65536
+SH     LOBSEGMENT               131072
+SH     INDEX PARTITION         9043968
+SH     TABLE PARTITION       134217728
+SH                           165675008
+                             185991168
+
+28 rows selected.
+
+
+Table cardinality relational and object tables
+
+OWNER  TABLE_NAME                       NUM_ROWS
+------ ------------------------------ ----------
+HR     COUNTRIES                              25
+HR     DEPARTMENTS                            27
+HR     EMPLOYEES                             107
+HR     JOBS                                   19
+HR     JOB_HISTORY                            10
+HR     LOCATIONS                              23
+HR     REGIONS                                 4
+IX     AQ$_ORDERS_QUEUETABLE_G                 0
+IX     AQ$_ORDERS_QUEUETABLE_H                 2
+IX     AQ$_ORDERS_QUEUETABLE_I                 2
+IX     AQ$_ORDERS_QUEUETABLE_L                 2
+IX     AQ$_ORDERS_QUEUETABLE_S                 4
+IX     AQ$_ORDERS_QUEUETABLE_T                 0
+IX     AQ$_STREAMS_QUEUE_TABLE_C               0
+IX     AQ$_STREAMS_QUEUE_TABLE_G               0
+IX     AQ$_STREAMS_QUEUE_TABLE_H               0
+IX     AQ$_STREAMS_QUEUE_TABLE_I               0
+IX     AQ$_STREAMS_QUEUE_TABLE_L               0
+IX     AQ$_STREAMS_QUEUE_TABLE_S               1
+IX     AQ$_STREAMS_QUEUE_TABLE_T               0
+IX     ORDERS_QUEUETABLE
+IX     STREAMS_QUEUE_TABLE
+IX     SYS_IOT_OVER_73650                      0
+IX     SYS_IOT_OVER_73679                      0
+OE     ACTION_TABLE                          132
+OE     CATEGORIES_TAB                         22
+OE     CUSTOMERS                             319
+OE     INVENTORIES                          1112
+OE     LINEITEM_TABLE                       2232
+OE     ORDERS                                105
+OE     ORDER_ITEMS                           665
+OE     PRODUCT_DESCRIPTIONS                 8640
+OE     PRODUCT_INFORMATION                   288
+OE     PRODUCT_REF_LIST_NESTEDTAB            288
+OE     PROMOTIONS                              2
+OE     PURCHASEORDER                         132
+OE     SUBCATEGORY_REF_LIST_NESTEDTAB         21
+OE     WAREHOUSES                              9
+PM     PRINT_MEDIA                             4
+PM     TEXTDOCS_NESTEDTAB                     12
+SH     CAL_MONTH_SALES_MV                     48
+SH     CHANNELS                                5
+SH     COSTS                                   0
+SH     COUNTRIES                              23
+SH     CUSTOMERS                           55500
+SH     DR$SUP_TEXT_IDX$I
+SH     DR$SUP_TEXT_IDX$K
+SH     DR$SUP_TEXT_IDX$N
+SH     DR$SUP_TEXT_IDX$U
+SH     FWEEK_PSCAT_SALES_MV                11266
+SH     PRODUCTS                               72
+SH     PROMOTIONS                            503
+SH     SALES                              918843
+SH     SALES_TRANSACTIONS_EXT
+SH     SUPPLEMENTARY_DEMOGRAPHICS           4500
+SH     TIMES                                1826
+
+56 rows selected.
+
+
+Index cardinality (without  LOB indexes)
+
+OWNER  INDEX_NAME                DISTINCT_KEYS   NUM_ROWS
+------ ------------------------- ------------- ----------
+HR     COUNTRY_C_ID_PK                      25         25
+HR     DEPT_ID_PK                           27         27
+HR     DEPT_LOCATION_IX                      7         27
+HR     EMP_DEPARTMENT_IX                    11        106
+HR     EMP_EMAIL_UK                        107        107
+HR     EMP_EMP_ID_PK                       107        107
+HR     EMP_JOB_IX                           19        107
+HR     EMP_MANAGER_IX                       18        106
+HR     EMP_NAME_IX                         107        107
+HR     JHIST_DEPARTMENT_IX                   6         10
+HR     JHIST_EMPLOYEE_IX                     7         10
+HR     JHIST_EMP_ID_ST_DATE_PK              10         10
+HR     JHIST_JOB_IX                          8         10
+HR     JOB_ID_PK                            19         19
+HR     LOC_CITY_IX                          23         23
+HR     LOC_COUNTRY_IX                       14         23
+HR     LOC_ID_PK                            23         23
+HR     LOC_STATE_PROVINCE_IX                17         17
+HR     REG_ID_PK                             4          4
+IX     AQ$_STREAMS_QUEUE_TABLE_Y             0          0
+OE     ACTION_TABLE_MEMBERS                132        132
+OE     CUSTOMERS_PK                        319        319
+OE     CUST_ACCOUNT_MANAGER_IX               4        319
+OE     CUST_EMAIL_IX                       319        319
+OE     CUST_LNAME_IX                       176        319
+OE     CUST_UPPER_NAME_IX                  319        319
+OE     INVENTORY_IX                       1112       1112
+OE     INV_PRODUCT_IX                      208       1112
+OE     ITEM_ORDER_IX                       105        665
+OE     ITEM_PRODUCT_IX                     185        665
+OE     LINEITEM_TABLE_MEMBERS              132        132
+OE     ORDER_ITEMS_PK                      665        665
+OE     ORDER_ITEMS_UK                      665        665
+OE     ORDER_PK                            105        105
+OE     ORD_CUSTOMER_IX                      47        105
+OE     ORD_ORDER_DATE_IX                   105        105
+OE     ORD_SALES_REP_IX                      9         70
+OE     PRD_DESC_PK                        8640       8640
+OE     PRODUCT_INFORMATION_PK              288        288
+OE     PROD_NAME_IX                       3727       8640
+OE     PROD_SUPPLIER_IX                     62        288
+OE     PROMO_ID_PK                           2          2
+OE     WAREHOUSES_PK                         9          9
+OE     WHS_LOCATION_IX                       9          9
+PM     PRINTMEDIA_PK                         4          4
+SH     CHANNELS_PK                           5          5
+SH     COSTS_PROD_BIX                        0          0
+SH     COSTS_TIME_BIX                        0          0
+SH     COUNTRIES_PK                         23         23
+SH     CUSTOMERS_GENDER_BIX                  2          5
+SH     CUSTOMERS_MARITAL_BIX                11         18
+SH     CUSTOMERS_PK                      55500      55500
+SH     CUSTOMERS_YOB_BIX                    75         75
+SH     DR$SUP_TEXT_IDX$KD                    0          0
+SH     DR$SUP_TEXT_IDX$KR                    0          0
+SH     DR$SUP_TEXT_IDX$X                     0          0
+SH     FW_PSC_S_MV_CHAN_BIX                  4          4
+SH     FW_PSC_S_MV_PROMO_BIX                 4          4
+SH     FW_PSC_S_MV_SUBCAT_BIX               21         21
+SH     FW_PSC_S_MV_WD_BIX                  210        210
+SH     PRODUCTS_PK                          72         72
+SH     PRODUCTS_PROD_CAT_IX                  5         72
+SH     PRODUCTS_PROD_STATUS_BIX              1          1
+SH     PRODUCTS_PROD_SUBCAT_IX              21         72
+SH     PROMO_PK                            503        503
+SH     SALES_CHANNEL_BIX                     4         92
+SH     SALES_CUST_BIX                     7059      35808
+SH     SALES_PROD_BIX                       72       1074
+SH     SALES_PROMO_BIX                       4         54
+SH     SALES_TIME_BIX                     1460       1460
+SH     SUP_TEXT_IDX
+SH     TIMES_PK                           1826       1826
+
+72 rows selected.
+
+SQL>
